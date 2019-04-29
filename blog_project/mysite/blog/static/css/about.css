@@ -1,0 +1,89 @@
+.container
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  box-shadow: -1px 12px 20px #aaa
+
+.frame
+  width: 330px
+  height: 310px
+
+.name
+  font:
+    family: 'Roboto'
+    size: 28px
+    weight: 300
+  color: white
+  text-align: center
+  background-color: #1e88e5
+  height: 150px
+  line-height: 100px
+  text-shadow: 1px 2px #111
+
+.avatar
+  background:
+    image: url(https://res.cloudinary.com/tonyooi/image/upload/v1461052752/me_tk2dfd.jpg)
+    size: 80px 80px
+    position: center center
+    repeat: no-repeat
+  margin: 0 auto
+  margin-top: -65px
+  margin-bottom: 20px
+  border-radius: 999px
+  width: 80px
+  height: 80px
+  overflow: hidden
+  z-index: 10
+  box-shadow: -1px 12px 20px #888
+
+.info
+  position:relative
+
+ul
+  margin: 0
+  padding: 0
+
+.tab
+  // position: relative
+  margin: 0
+  padding: 0
+  list-style:
+    type: none
+  width: 32%
+  display: inline-block
+  text-align: center
+  // border:
+  //   bottom: 1px solid #ccc
+  font:
+    family : 'Open Sans'
+    size: 18px
+
+input[name=info_type]
+  display: none
+  &:checked
+    &+.tab_name
+      border-bottom: 3px solid red
+    &~.info_content
+      // display: block
+      opacity: 1
+      transform: scale(1)
+
+.tab_name
+  width: 100%
+
+.info_content
+  position: absolute
+  left: 0
+  width: 99%
+  height: 100px
+  line-height: 100px
+  // display: none
+  opacity: 0
+  transform: scale(1.3)
+  text-shadow: 1px 2px #ccc
+  // border: 2px solid green
+  transition: 0.8s ease-in-out transform 0.15s, 0.6s ease-in-out opacity
+  font:
+    family: 'Arimo'
+    size: 28px
